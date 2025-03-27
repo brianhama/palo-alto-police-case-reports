@@ -8,4 +8,6 @@ Wanting to experiment a bit further, I decided to build a quick frontend to show
 
 You can check out the full codebase and my approach on GitHub: https://github.com/brianhama/palo-alto-police-case-reports.
 
+The script for parsing the pdfs is located in the script folder.
+
 The live website is https://www.paloaltopolice.org/
