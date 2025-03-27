@@ -8,8 +8,7 @@ export async function getDb() {
     if (db) {
         return db;
     }
-
-    const dbPath = path.resolve(__dirname, '../../../public/arrest_reports.db');
+    const dbPath = path.join(process.cwd(), 'db/arrest_reports.db');
 
     console.log(dbPath);
 

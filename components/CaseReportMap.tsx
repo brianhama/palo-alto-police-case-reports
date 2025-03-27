@@ -10,10 +10,9 @@ export default function CaseReportMap({reports, setSelectedReportId}: {reports: 
     return (
 <div className="w-full h-[500px]">
 <APIProvider
-
-    apiKey="AIzaSyCYiYnOGLCOBnH0BChhpejO6_-xl3XXGlg">
+    apiKey="AIzaSyCmqCO1Okpep12h-jXmTeswa0kSpsIbwco">
     <Map
-    mapId="5d57acc604008d03"
+    mapId="4712fd750ea17be4"
       defaultZoom={13}
       gestureHandling={'greedy'}
       disableDefaultUI={true}

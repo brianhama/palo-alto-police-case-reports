@@ -16,7 +16,7 @@ export async function GET(request: Request) {
     } catch (error) {
         console.error('Error fetching reports:', error);
         return NextResponse.json(
-            { error: 'Internal Server Error' },
+            { error: error instanceof Error ? error.message : 'Unknown error' },
             { status: 500 }
         );
     }
