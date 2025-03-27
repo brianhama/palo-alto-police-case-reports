@@ -19,7 +19,7 @@
     height: 100vh;
   }
   .map {
-    flex: 0 0 40%;
+    flex: 0 0 30%;
     background-color: #d0e7ff;
     display: flex;
     align-items: center;
