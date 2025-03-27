@@ -1,5 +1,6 @@
 import sqlite3 from 'sqlite3';
 import { open, Database } from 'sqlite';
+import path from 'path';
 
 let db: Database | null = null;
 
@@ -8,8 +9,12 @@ export async function getDb() {
         return db;
     }
 
+    const dbPath = path.resolve(__dirname, '../../../public/arrest_reports.db');
+
+    console.log(dbPath);
+
     db = await open({
-        filename: './public/arrest_reports.db',
+        filename: dbPath,
         driver: sqlite3.Database
     });
 
