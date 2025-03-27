@@ -1,53 +1,11 @@
-# Next.js & HeroUI Template
+I recently stumbled across the Palo Alto Police Department's daily police report logs online, which they conveniently publish as PDF files (https://www.cityofpaloalto.org/Departments/Police/Public-Information-Portal/Police-Report-Log). My initial thought was simple: parse these PDFs, extract the data, and organize it neatly into a database. Easy, right?
 
-This is a template for creating applications using Next.js 14 (app directory) and HeroUI (v2).
+Turns out, parsing PDF files—especially those containing tables—is deceptively tricky. PDF files don't inherently preserve table structures, and these specific reports were particularly challenging. The data tables spanned multiple pages, breaking apart in unexpected places. This meant I had to recombine fragments carefully to reconstruct coherent tables.
 
-[Try it on CodeSandbox](https://githubbox.com/heroui-inc/heroui/next-app-template)
+After experimenting with various tools and approaches, I settled on Python combined with Tabula, which allowed me to reliably extract and reconstruct the table data.
 
-## Technologies Used
+Wanting to experiment a bit further, I decided to build a quick frontend to showcase the data visually. I've been meaning to explore Next.js deployed on Vercel, and this seemed like a perfect opportunity. The result? A simple, single-page website featuring an interactive table and map to visualize the police report data effectively.
 
-- [Next.js 14](https://nextjs.org/docs/getting-started)
-- [HeroUI v2](https://heroui.com/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Tailwind Variants](https://tailwind-variants.org)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Framer Motion](https://www.framer.com/motion/)
-- [next-themes](https://github.com/pacocoursey/next-themes)
+You can check out the full codebase and my approach on GitHub: https://github.com/brianhama/palo-alto-police-case-reports.
 
-## How to Use
-
-### Use the template with create-next-app
-
-To create a new project based on this template using `create-next-app`, run the following command:
-
-```bash
-npx create-next-app -e https://github.com/heroui-inc/next-app-template
-```
-
-### Install dependencies
-
-You can use one of them `npm`, `yarn`, `pnpm`, `bun`, Example using `npm`:
-
-```bash
-npm install
-```
-
-### Run the development server
-
-```bash
-npm run dev
-```
-
-### Setup pnpm (optional)
-
-If you are using `pnpm`, you need to add the following code to your `.npmrc` file:
-
-```bash
-public-hoist-pattern[]=*@heroui/*
-```
-
-After modifying the `.npmrc` file, you need to run `pnpm install` again to ensure that the dependencies are installed correctly.
-
-## License
-
-Licensed under the [MIT license](https://github.com/heroui-inc/next-app-template/blob/main/LICENSE).
+The live website is https://www.paloaltopolice.org/
