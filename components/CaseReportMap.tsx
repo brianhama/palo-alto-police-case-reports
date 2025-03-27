@@ -8,7 +8,7 @@ import { ClusteredArrestMarkers } from './ClusteredArrestMarker';
 export default function CaseReportMap({reports, setSelectedReportId}: {reports: ArrestReport[], setSelectedReportId: (reportId: string) => void}) {
     
     return (
-<div className="w-full h-[500px] md:h-[300px]">
+<div className="w-full h-[300px] md:h-[300px]">
 <APIProvider
     apiKey="AIzaSyCmqCO1Okpep12h-jXmTeswa0kSpsIbwco">
     <Map
