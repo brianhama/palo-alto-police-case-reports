@@ -36,7 +36,9 @@ function handleReportClick(reportId: string) {
   return (
 
     <div className="container w-full" style={{minWidth: '100%'}} >
-      <h1>Palo Alto Police Case Reports</h1>
+     <div className="p-6"> <h1>Palo Alto Police Case Reports</h1>
+      <p className="text-sm center text-center"><a className="text-underline" href="https://github.com/brianhama/palo-alto-police-case-reports">https://github.com/brianhama/palo-alto-police-case-reports</a></p>
+</div>
 <div className="map">
 
         <CaseReportMap reports={reports} setSelectedReportId={handleReportClick} /> 

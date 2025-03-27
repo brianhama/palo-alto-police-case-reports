@@ -32,14 +32,14 @@ export default function CaseReportTable({reports, selectedReportId}: {reports: A
     return (
             <Table isHeaderSticky={true}
   aria-label="Example table with client side sorting"
-  className="min-h-[400px] w-full"
+  className="min-h-[400px] w-full" removeWrapper={true}
   color="default" isStriped={true}
   fullWidth={true}
   layout="auto"
   radius="sm"
   shadow="sm">
   <TableHeader>
-    <TableColumn>
+    <TableColumn className="hidden md:table-cell">
       Case Number
     </TableColumn>
     <TableColumn>
@@ -58,7 +58,7 @@ export default function CaseReportTable({reports, selectedReportId}: {reports: A
  <TableBody items={reports}>
     {(item: ArrestReport) => (
       <TableRow id={"row-" + item.id} key={item.id}>
-        <TableCell className="whitespace-nowrap">{item.case_number}</TableCell>
+        <TableCell className="whitespace-nowrap hidden md:table-cell">{item.case_number}</TableCell>
         <TableCell className="whitespace-nowrap">{new Date(item.incident_datetime).toLocaleString('en-US', { month: 'numeric', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric' })}</TableCell>
         <TableCell>{item.offense}</TableCell>
         <TableCell>{item.location}</TableCell>
