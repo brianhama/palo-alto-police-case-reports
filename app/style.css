@@ -1,0 +1,63 @@
+.marker-clustering-tree {
+    font-size: 2rem;
+  }
+  
+  .marker-clustering-control-panel .attribution {
+    font-size: 0.75em;
+  }
+
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  .map {
+    flex: 0 0 40%;
+    background-color: #d0e7ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    color: #555;
+    border-bottom: 2px solid #ccc;
+  }
+  .table-container {
+    flex: 1;
+    overflow-y: auto;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  th {
+    background-color: #f7f7f7;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+
+  tr.selected {
+    background-color: #ffd5d57b;
+  }
+
+  td.name {
+    text-decoration: underline;
+  }
+
+  h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    }
