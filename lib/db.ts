@@ -9,7 +9,7 @@ export async function getDb() {
     }
 
     db = await open({
-        filename: './arrest_reports.db',
+        filename: './public/arrest_reports.db',
         driver: sqlite3.Database
     });
 

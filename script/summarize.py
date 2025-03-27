@@ -119,7 +119,7 @@ def extract_text_from_pdf(pdf_path):
         return None
 
 def init_database():
-    conn = sqlite3.connect('../arrest_reports.db')
+    conn = sqlite3.connect('./public/arrest_reports.db')
     cursor = conn.cursor()
     
     cursor.execute('''
